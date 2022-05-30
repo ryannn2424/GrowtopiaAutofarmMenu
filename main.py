@@ -44,18 +44,12 @@ while True:
     event, values = window.read()
     if event == sg.WIN_CLOSED:
         break
-    if event == "Chandeliers":
-        punch_wait = 300
-        punch_time = 70
-        loop = 1
-    if event == "Grass/Pepper/Sugar":
-        punch_wait = 300
-        punch_time = 100
-        loop = 1
-    if event == "Laser Grids":
-        punch_wait = 300
-        punch_time = 85
-        loop = 1
+    elif event == "Chandeliers":
+        punch_wait, punch_time, loop = 300, 70, 1
+    elif event == "Grass/Pepper/Sugar":
+        punch_wait, punch_time, loop = 300, 100, 1
+    elif event == "Laser Grids":
+        punch_wait, punch_time, loop = 300, 85, 1
     while loop == 1:
         movement()
         cancel()
